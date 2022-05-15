@@ -14,21 +14,24 @@ export const Page1Screen = ({navigation}: Props) => {
         title="Go to page 2"
         onPress={() => navigation.navigate('Page2Screen')}
       />
-      
       <Text>Navigate with arguments</Text>
-      <TouchableOpacity
-        onPress={() =>
-          navigation.navigate('PersonScreen', {id: 1, name: 'Clarissa'})
-        }>
-        <Text>Klaryon</Text>
-      </TouchableOpacity>
+      <View style={{flexDirection: 'row'}}>
+        <TouchableOpacity
+          style={{...styles.buttonBig, backgroundColor: '#5856D6'}}
+          onPress={() =>
+            navigation.navigate('PersonScreen', {id: 1, name: 'Clarissa'})
+          }>
+          <Text style={styles.buttonBigText}>Klaryon</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() =>
-          navigation.navigate('PersonScreen', {id: 2, name: 'Maria'})
-        }>
-        <Text>Maria</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={{...styles.buttonBig, backgroundColor: '#FF9427'}}
+          onPress={() =>
+            navigation.navigate('PersonScreen', {id: 2, name: 'Maria'})
+          }>
+          <Text style={styles.buttonBigText}>Maria</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
