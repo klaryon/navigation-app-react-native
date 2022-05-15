@@ -31,4 +31,14 @@ export const styles = StyleSheet.create({
     height: 150,
     borderRadius: 100,
   },
+  menuContainer: {
+    marginVertical: 30,
+    marginHorizontal: 50,
+  },
+  menuButton: {
+    marginVertical: 10,
+  },
+  menuText: {
+    fontSize: 20,
+  },
 });
