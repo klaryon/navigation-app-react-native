@@ -14,12 +14,20 @@ export const Page1Screen = ({navigation}: Props) => {
         title="Go to page 2"
         onPress={() => navigation.navigate('Page2Screen')}
       />
+      
       <Text>Navigate with arguments</Text>
       <TouchableOpacity
         onPress={() =>
           navigation.navigate('PersonScreen', {id: 1, name: 'Clarissa'})
         }>
         <Text>Klaryon</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('PersonScreen', {id: 2, name: 'Maria'})
+        }>
+        <Text>Maria</Text>
       </TouchableOpacity>
     </View>
   );
