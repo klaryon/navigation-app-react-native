@@ -4,7 +4,6 @@ import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
-import {StackNavigator} from './StackNavigator';
 import {SettingsScreen} from '../screens/SettingsScreen';
 import {
   Image,
@@ -14,6 +13,7 @@ import {
   Text,
 } from 'react-native';
 import {styles} from '../theme/appTheme';
+import {TabsNavigator} from './TabsNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -21,7 +21,7 @@ export const DrawerNavigatorPersonalized = () => {
   const {width} = useWindowDimensions();
   return (
     <Drawer.Navigator drawerContent={props => <MenuContent {...props} />}>
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      <Drawer.Screen name="TabsNavigator" component={TabsNavigator} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
   );
