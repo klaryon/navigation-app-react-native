@@ -10,7 +10,10 @@ export const Page3Screen = ({navigation}: Props) => {
     <View style={styles.globalMargin}>
       <Text style={styles.title}>Page 3 Screen</Text>
       <Button title="Go back" onPress={() => navigation.pop()} />
-      <Button title="Got to page 1" onPress={() => navigation.popToTop()} />
+      <Button
+        title="Go to page 1"
+        onPress={() => navigation.navigate('Page1Screen')}
+      />
     </View>
   );
 };

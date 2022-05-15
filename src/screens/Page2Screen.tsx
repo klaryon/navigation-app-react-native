@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import {Button, Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {styles} from '../theme/appTheme';
@@ -9,10 +9,10 @@ export const Page2Screen = () => {
   useEffect(() => {
     navigator.setOptions({
       title: 'Hello World',
-      headerBackTitle: ''
-    })
-  }, [])
-  
+      headerBackTitle: '',
+    });
+  }, []);
+
   return (
     <View style={styles.globalMargin}>
       <Text style={styles.title}>Page 2 Screen</Text>
