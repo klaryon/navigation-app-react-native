@@ -20,7 +20,13 @@ const Drawer = createDrawerNavigator();
 export const DrawerNavigatorPersonalized = () => {
   const {width} = useWindowDimensions();
   return (
-    <Drawer.Navigator drawerContent={props => <MenuContent {...props} />}>
+    <Drawer.Navigator
+      screenOptions={
+        {
+          // headerShown: false,
+        }
+      }
+      drawerContent={props => <MenuContent {...props} />}>
       <Drawer.Screen name="TabsNavigator" component={TabsNavigator} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
@@ -44,7 +50,7 @@ const MenuContent = ({navigation}: DrawerContentComponentProps) => {
       <View style={styles.menuContainer}>
         <TouchableOpacity
           style={styles.menuButton}
-          onPress={() => navigation.navigate('StackNavigator')}>
+          onPress={() => navigation.navigate('TabsNavigator')}>
           <Text style={styles.menuText}>Navigation</Text>
         </TouchableOpacity>
         <TouchableOpacity
