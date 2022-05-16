@@ -1,10 +1,11 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Text} from 'react-native';
 import {Tab1Screen} from '../screens/Tab1Screen';
 import {Tab2Screen} from '../screens/Tab2Screen';
 import {StackNavigator} from './StackNavigator';
 import {colors} from '../theme/appTheme';
-import {Text} from 'react-native';
+import { TopTabNavigator } from './TopTabNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +41,7 @@ export const TabsNavigator = () => {
           title: 'Tab2',
           tabBarIcon: props => <Text style={{color: props.color}}>T2</Text>,
         }}
-        component={Tab2Screen}
+        component={TopTabNavigator}
       />
       <Tab.Screen
         name="StackNavigator"
